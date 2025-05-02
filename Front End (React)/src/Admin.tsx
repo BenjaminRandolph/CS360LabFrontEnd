@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 type User = {
   id: number;
-  name: string;
+  UserName: string;
   email: string;
 };
 
@@ -64,7 +64,7 @@ function Admin({ currentUser }: AccountProps) {
 				           <div className="card h-100 shadow-sm">
 				             <div className="card-body">
 				               <h5 className="card-title">{u.name}</h5>
-				               <p className="card-text"><strong>Email:</strong> {u.userName}</p>
+				               <p className="card-text"><strong>User name:</strong> {u.UserName}</p>
 				               <p className="card-text"><strong>User ID:</strong> {u.id}</p>
 				             </div>
 				           </div>
