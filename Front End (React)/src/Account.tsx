@@ -34,7 +34,7 @@ function Account({ currentUser }: AccountProps) {
   useEffect(() => {  
 	const fetchUserInfo = async () => {
 	  try {
-		const res = await fetch(`https://cs360labbackend.railway.internal:7096/api/User/${userID}`);
+		const res = await fetch(`https://${API_URL}:7096/api/User/${userID}`);
 		const data = await res.json();
 		console.log("Fetched user data:", data);
 		setUser(data);
@@ -49,7 +49,7 @@ function Account({ currentUser }: AccountProps) {
   useEffect(() => {
 	const fetchTransactions = async () => {
 	  try {
-		const res = await fetch(`https://cs360labbackend.railway.internal:7096/api/Transactions`);
+		const res = await fetch(`https://${API_URL}:7096/api/Transactions`);
 		const data: Transaction[] = await res.json();
   
 		const userTransactions = data.filter(tx => tx.purchaserID === currentUser!.ID);
