@@ -39,7 +39,7 @@ function Checkout({ currentUser }: CheckProps){
 				dateOfPosting: item.dateOfPosting,
 			  };
 	  
-			  await fetch("https://localhost:7096/api/Transactions", {
+			  await fetch("https://cs360labbackend.railway.internal:7096/api/Transactions", {
 				method: "POST",
 				headers: {
 				  "Content-Type": "application/json",
@@ -56,12 +56,12 @@ function Checkout({ currentUser }: CheckProps){
 
 	const fetchCartItems = async () => {
 		try {
-		  const res = await fetch('https://localhost:7096/api/Carts/');
+		  const res = await fetch('https://cs360labbackend.railway.internal:7096/api/Carts/');
 		  const cartData = await res.json();
 	  
 		  const enrichedItems: CartItem[] = await Promise.all(
 			cartData.map(async (cartItem: { id: number; listingID: number }) => {
-			  const listingRes = await fetch('https://localhost:7096/api/ItemListings/' + cartItem.listingID);
+			  const listingRes = await fetch('https://cs360labbackend.railway.internal:7096/api/ItemListings/' + cartItem.listingID);
 			  const itemData = await listingRes.json();
 	  
 			  return {
