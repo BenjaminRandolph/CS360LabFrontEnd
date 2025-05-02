@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 
 type User = {
-  id: number;
-  name: string;
-  email: string;
+  ID: number;
+  UserName: string;
+  Email: string;
+  Address: string;
+  PhoneNumber: string;
+  Funds: number;
 };
 
 type AccountProps = {
@@ -72,19 +75,19 @@ function Account({ currentUser }: AccountProps) {
 				<br></br>
 				<div className="container">
           		  <h5>Name:</h5>
-          		  <p>{user?.userName || "Failed to load"}</p>
+          		  <p>{user?.UserName || "Failed to load"}</p>
 
 				  <h5>Phone number:</h5>
-          		  <p>{user?.phoneNumber || "Failed to load"}</p>
+          		  <p>{user?.PhoneNumber || "Failed to load"}</p>
 
 				  <h5>Address:</h5>
-          		  <p>{user?.address || "Failed to load"}</p>
+          		  <p>{user?.Address || "Failed to load"}</p>
 
 				  <h5>Email:</h5>
-          		  <p>{user?.email || "Failed to load"}</p>
+          		  <p>{user?.Email || "Failed to load"}</p>
 			
           		  <h5>Balance:</h5>
-          		  <p>{user?.funds || 0}</p>
+          		  <p>{user?.Funds || 0}</p>
           		</div>
 			</div>
 		  <div className="container">
