@@ -6,8 +6,8 @@ type CheckProps = {
 };
 
 type CartItem = {
-	cartID: number;
 	id: number;
+	ownerID: number;
 	name: string;
 	description: string;
 	price: number;
