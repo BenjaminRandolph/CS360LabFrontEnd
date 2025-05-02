@@ -21,7 +21,7 @@ function Listings({ currentUser }: ListingsProps){
 	useEffect(() => {
    	  const fetchListings = async () => {
      	try {
-     		const response = await fetch("https://cs360labbackend.railway.internal:7096/api/ItemListings"); // Update URL as needed
+     		const response = await fetch("https://bensfunnyapi.up.railway.app:7096/api/ItemListings"); // Update URL as needed
      		if (!response.ok) throw new Error("Failed to fetch listings");
 
     	    const data = await response.json();
@@ -36,7 +36,7 @@ function Listings({ currentUser }: ListingsProps){
 	  
 	  const addToCart = async (listingID: number) => {
 		try {
-		  const response = await fetch('https://cs360labbackend.railway.internal:7096/api/Carts', {
+		  const response = await fetch('https://bensfunnyapi.up.railway.app:7096/api/Carts', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',

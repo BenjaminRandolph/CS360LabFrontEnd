@@ -19,7 +19,7 @@ function App(){
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('https://cs360labbackend.railway.internal:7096/api/User')
+		fetch('https://bensfunnyapi.up.railway.app:7096/api/User')
 		  .then(res => {
 			if (!res.ok) {
 			  throw new Error(`HTTP error! Status: ${res.status}`);
@@ -35,7 +35,7 @@ function App(){
 	const handleSubmit = (e: React.FormEvent) => {
     	e.preventDefault();
 
-    	fetch('https://cs360labbackend.railway.internal:7096/api/User/LoginUser/' + username + '/' + userpass)
+    	fetch('https://bensfunnyapi.up.railway.app:7096/api/User/LoginUser/' + username + '/' + userpass)
   			.then(res => {
   			  if (!res.ok) {
   			    throw new Error('Login failed');

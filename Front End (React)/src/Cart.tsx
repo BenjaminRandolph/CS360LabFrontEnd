@@ -38,7 +38,7 @@ function Cart({ currentUser }: CartProps){
 	
 	const removeItem = async (cartId: number) => {
 		try {
-		  const res = await fetch('https://cs360labbackend.railway.internal:7096/api/Carts/' + cartId, {
+		  const res = await fetch('https://bensfunnyapi.up.railway.app:7096/api/Carts/' + cartId, {
 			method: 'DELETE',
 		  });
 	  
@@ -57,7 +57,7 @@ function Cart({ currentUser }: CartProps){
 	const grandTotal = totalPrice + tax;
 	const addToCart = async (listingID: number) => {
 		try {
-		  const response = await fetch('https://cs360labbackend.railway.internal:7096/api/Carts', {
+		  const response = await fetch('https://bensfunnyapi.up.railway.app:7096/api/Carts', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',
@@ -81,14 +81,14 @@ function Cart({ currentUser }: CartProps){
 
 		const fetchCartItems = async () => {
 		  try {
-			const res = await fetch('https://cs360labbackend.railway.internal:7096/api/Carts/');
+			const res = await fetch('https://bensfunnyapi.up.railway.app:7096/api/Carts/');
 			const cartData = await res.json();
 	  
 			console.log("Fetched cart data:", cartData);
 	  
 			const enrichedItems: CartItem[] = await Promise.all(
 			  cartData.map(async (cartItem: { id: number; listingID: number }) => {
-				const listingRes = await fetch('https://cs360labbackend.railway.internal:7096/api/ItemListings/' + cartItem.listingID);
+				const listingRes = await fetch('https://bensfunnyapi.up.railway.app:7096/api/ItemListings/' + cartItem.listingID);
 				const itemData = await listingRes.json();
 	  
 				return {
@@ -119,7 +119,7 @@ function Cart({ currentUser }: CartProps){
 	  useEffect(() => {
 		const fetchRecommended = async () => {
 		  try {
-			const response = await fetch("https://cs360labbackend.railway.internal:7096/api/ItemListings");
+			const response = await fetch("https://bensfunnyapi.up.railway.app:7096/api/ItemListings");
 			if (!response.ok) throw new Error("Failed to fetch products");
 	  
 			const data = await response.json();
