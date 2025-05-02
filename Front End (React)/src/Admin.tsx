@@ -63,8 +63,8 @@ function Admin({ currentUser }: AccountProps) {
 				         <div className="col-md-6 col-lg-4 mb-4" key={u.id}>
 				           <div className="card h-100 shadow-sm">
 				             <div className="card-body">
-				               <h5 className="card-title">{u.name}</h5>
-				               <p className="card-text"><strong>User name:</strong> {u.UserName}</p>
+				               <h5 className="card-title">{u.UserName}</h5>
+				               <p className="card-text"><strong>User name:</strong> {u.email}</p>
 				               <p className="card-text"><strong>User ID:</strong> {u.id}</p>
 				             </div>
 				           </div>

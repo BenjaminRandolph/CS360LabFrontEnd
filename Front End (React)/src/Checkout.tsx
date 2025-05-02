@@ -12,6 +12,7 @@ type CartItem = {
 	description: string;
 	price: number;
 	quantity: number;
+	dateOfPosting: string;
 };
 
 function Checkout({ currentUser }: CheckProps){
