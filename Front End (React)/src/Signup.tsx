@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import React, { useState } from 'react';
-require('dotenv').config();
 
 function Signup(){
 	const [formData, setFormData] = useState({
