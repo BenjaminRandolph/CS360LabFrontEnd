@@ -1,0 +1,2 @@
+[phases.build]
+cmds = ["ARG REACT_APP_API_URL", "RUN echo $REACT_APP_API_URL"]
