@@ -36,7 +36,7 @@ function Signup(){
 		}
 	
 		try {
-		  const response = await fetch('https://' + process.env.API_URL + '/api/User', {
+		  const response = await fetch('https://' + process.env.REACT_APP_API_URL + '/api/User', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',
