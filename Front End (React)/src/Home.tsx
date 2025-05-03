@@ -38,7 +38,7 @@ function Home({ currentUser }: HomeProps){
 	useEffect(() => {
 		const fetchItems = async () => {
 			try {
-				const res = await fetch("https://bensfunnyapi.up.railway.app:7096/api/ItemListings");
+				const res = await fetch("https://bensfunnyapi.up.railway.app:8080/api/ItemListings");
 				if (!res.ok) throw new Error("Failed to fetch items");
 				const data = await res.json();
 	
@@ -57,7 +57,7 @@ function Home({ currentUser }: HomeProps){
 	  
 	  const addToCart = async (listingID: number) => {
 		try {
-		  const response = await fetch('https://bensfunnyapi.up.railway.app:7096/api/Carts', {
+		  const response = await fetch('https://bensfunnyapi.up.railway.app:8080/api/Carts', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',

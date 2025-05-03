@@ -36,7 +36,7 @@ function Signup(){
 		}
 	
 		try {
-		  const response = await fetch('https://bensfunnyapi.up.railway.app:7096/api/User', {
+		  const response = await fetch('https://bensfunnyapi.up.railway.app:8080/api/User', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',

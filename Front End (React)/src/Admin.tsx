@@ -29,7 +29,7 @@ function Admin({ currentUser }: AccountProps) {
   useEffect(() => {
 	const fetchUsers = async () => {
 	  try {
-		const res = await fetch(`https://bensfunnyapi.up.railway.app:7096/api/User`);
+		const res = await fetch(`https://bensfunnyapi.up.railway.app:8080/api/User`);
 		const data: User[] = await res.json();
 		setUsers(data);
 	  } catch (error) {
