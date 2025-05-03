@@ -36,7 +36,7 @@ function Signup(){
 		}
 	
 		try {
-		  const response = await fetch('https://cs360labbackend.railway.internal:8080/api/User', {
+		  const response = await fetch('https://cs360labbackend.railway.internal8080/api/User', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',
