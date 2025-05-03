@@ -1,3 +1,5 @@
+FROM node
+
 # Specify the variable you need
 ARG REACT_APP_API_URL
 # Use the varible
